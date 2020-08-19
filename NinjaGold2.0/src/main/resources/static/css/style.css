@@ -1,0 +1,23 @@
+.content{
+	display: flex;
+}
+
+.lugar{
+	width: 25%;
+	height: 25vh;
+	background-color: gray;
+}
+
+.green{
+	color: green;
+}
+
+.red{
+	color: red;
+}
+.activities{
+	overflow: scroll;
+	overflow-x: hidden; 
+	width: 30%;
+	height: 250px;
+}
