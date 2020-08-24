@@ -35,28 +35,28 @@ public class BooksService {
             return null;
         }
     }
-	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
-		Book book = findBook(id);
-		if(book == null) {
-			return null;
-		}
-		book.setTitle(title);
-		book.setDescription(desc);
-		book.setLanguage(lang);
-		book.setNumberOfPages(numOfPages);
-		return bookRepository.save(book);
+     public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+	Book book = findBook(id);
+	if(book == null) {
+		return null;
 	}
-	public void deleteBook(Long id) {
-		Book book = findBook(id);
-		if(book == null) {
-			return;
-		}
-		bookRepository.deleteById(id);
+	book.setTitle(title);
+	book.setDescription(desc);
+	book.setLanguage(lang);
+	book.setNumberOfPages(numOfPages);
+	return bookRepository.save(book);
 	}
-	
+      public void deleteBook(Long id) {
+	Book book = findBook(id);
+	if(book == null) {
+		return;
+	}
+	bookRepository.deleteById(id);
+	}
+
 	///Este metodo extra es para aceptar el objeto book con el conjunto de todos los atributos de book
-	public void updateBook(@Valid Book book) {
-		 bookRepository.save(book);
-		
+       public void updateBook(@Valid Book book) {
+	 bookRepository.save(book);
+
 	}
 }
