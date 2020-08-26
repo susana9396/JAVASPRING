@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-    <%@ page isErrorPage="true"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isErrorPage="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +11,7 @@
 <body>
 	<h1> Editar libro</h1>
 	<form:form action="/books/${books.id}/update" method="post" modelAttribute="books" >
-		<input type="hidden" name="_method" value="put">
-	    
-		
+		<input type="hidden" name="_method" value="put">	
 			<form:label path="title" >Título</form:label>
 			<form:errors path="title"/>
 			<form:input path="title"/>
