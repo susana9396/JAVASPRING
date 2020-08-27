@@ -1,0 +1,12 @@
+*{
+
+}
+.caja1, .caja2{
+  display:inline-block;
+  width:200px;
+  hight:500px;
+  vertical-align:top;
+}
+select{
+	display:inline-block;
+}
